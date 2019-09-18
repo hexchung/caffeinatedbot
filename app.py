@@ -85,7 +85,7 @@ def submit_tweet(message, tweet_to_reply=None, handle=None):
 def get_message(handle):
 
     wordsApi = WordsApi.WordsApi(client)
-    message = "the " wordsApi.getRandomWord(partOfSpeech='noun') ": " wordsApi.getRandomWord(partofSpeech='adjective') ", with a " wordsApi.getRandomWord(partOfSpeech='adjective') " " wordsApi.getReverseDictionary('food', partOfSpeech='noun', limit=1) "."
+    message = "the " wordsApi.getRandomWord(partOfSpeech='noun') ": " wordsApi.getRandomWord(partofSpeech='adjective') ", with a hint of " wordsApi.getRandomWord(partOfSpeech='adjective') " " wordsApi.getReverseDictionary('food', partOfSpeech='noun', limit=1) "."
     assert len(message) <= TWEET_LENGTH
     return message
 
